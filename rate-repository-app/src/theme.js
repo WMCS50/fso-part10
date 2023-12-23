@@ -5,6 +5,7 @@ const theme = {
     textTertiary: 'white',
     primary: '#0366d6',
     appBarBackground: '#24292e',
+    mainBackground: 'white',
   },
   fontSizes: {
     body: 14,
@@ -17,6 +18,9 @@ const theme = {
     normal: '400',
     bold: '700',
   },
+  borderRadius: {
+    normal: 5,
+  }
 };
 
 export default theme;

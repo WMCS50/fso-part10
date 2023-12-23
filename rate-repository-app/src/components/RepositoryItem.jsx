@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import Text from './Text';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.mainBackground,
     padding: 20,
     borderBottomWidth: 10,
     borderBottomColor: '#f0f0f0',
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   headlineImage: {
     width: 75,
     height: 75,
-    borderRadius: 5,
+    borderRadius: theme.borderRadius.normal,
     marginRight: 20,
   },
 
@@ -43,11 +44,11 @@ const styles = StyleSheet.create({
   },
   
   language: {
-    backgroundColor: '#007acc',
-    color: 'white',
-    borderRadius: 4,
-    paddingVertical: 4,
-    paddingHorizontal: 6,
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.textTertiary,
+    borderRadius: theme.borderRadius.normal,
+    paddingVertical: 5,
+    paddingHorizontal: 5,
   },
 });
 
