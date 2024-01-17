@@ -1,10 +1,12 @@
 import { useQuery } from '@apollo/client';
 import { ME } from '../graphql/queries';
 
-const useMe = () => {
+const useMe = (includeReviews = false) => {
+  console.log('includeReviews', includeReviews)
   const { data, error, loading } = useQuery(ME, 
     {
-      fetchPolicy: 'cache-and-network'
+      fetchPolicy: 'cache-and-network',
+      variables: { includeReviews }
     }
   );
   
@@ -17,9 +19,12 @@ const useMe = () => {
   }
 
   const currentUser = data.me;
-  console.log('current user', currentUser)
+  const reviews = includeReviews ? data.me.reviews : null;
   
-  return { loading: false, currentUser, error: null };
+  console.log('useMe current user', currentUser)
+  console.log('useMe reviews', reviews)
+  
+  return { loading: false, currentUser, reviews, error: null };
 };
 
 export default useMe;

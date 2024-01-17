@@ -5,11 +5,9 @@
       "version": "detect"
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jsx"],
+
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jest/recommended"],
   "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "requireConfigFile": false
-  },
   "env": {
     "react-native/react-native": true
   },
